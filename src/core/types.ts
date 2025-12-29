@@ -4,6 +4,53 @@
 
 import type { CacheAdapter } from '@catalyst-team/cache';
 
+// ===== Basic Trading Types =====
+
+/**
+ * Order side: BUY or SELL
+ */
+export type Side = 'BUY' | 'SELL';
+
+/**
+ * Order type for limit/market orders
+ * - GTC: Good Till Cancelled (default for limit orders)
+ * - GTD: Good Till Date (limit order with expiration)
+ * - FOK: Fill Or Kill (market order, must fill completely or cancel)
+ * - FAK: Fill And Kill (market order, fill what you can, cancel rest)
+ */
+export type OrderType = 'GTC' | 'FOK' | 'GTD' | 'FAK';
+
+// ===== Orderbook Types =====
+
+/**
+ * Price level in an orderbook
+ */
+export interface OrderbookLevel {
+  price: number;
+  size: number;
+}
+
+/**
+ * Unified Orderbook type used across the SDK
+ *
+ * This is the base orderbook structure. Services may extend this
+ * with additional fields (e.g., OrderbookSnapshot adds tickSize, minOrderSize).
+ */
+export interface Orderbook {
+  /** Token/asset ID */
+  assetId?: string;
+  /** Bid levels (highest first) */
+  bids: OrderbookLevel[];
+  /** Ask levels (lowest first) */
+  asks: OrderbookLevel[];
+  /** Timestamp in milliseconds */
+  timestamp: number;
+  /** Market identifier (conditionId) */
+  market?: string;
+  /** Hash for change detection */
+  hash?: string;
+}
+
 /**
  * SDK Configuration Options
  *

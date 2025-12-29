@@ -33,6 +33,8 @@ import type {
   DualKLineData,
   SpreadDataPoint,
   RealtimeSpreadAnalysis,
+  Side,
+  Orderbook,
 } from '../core/types.js';
 
 // CLOB Host
@@ -45,7 +47,9 @@ export const POLYGON_MAINNET = 137;
 // Types
 // ============================================================================
 
-export type Side = 'BUY' | 'SELL';
+// Side and Orderbook are imported from core/types.ts
+// Re-export for backward compatibility
+export type { Side, Orderbook } from '../core/types.js';
 
 export type PriceHistoryIntervalString = '1h' | '6h' | '1d' | '1w' | 'max';
 
@@ -60,15 +64,6 @@ export interface PriceHistoryParams {
 export interface PricePoint {
   timestamp: number;
   price: number;
-}
-
-export interface Orderbook {
-  bids: Array<{ price: number; size: number }>;
-  asks: Array<{ price: number; size: number }>;
-  timestamp: number;
-  market?: string;
-  assetId?: string;
-  hash?: string;
 }
 
 export interface MarketServiceConfig {

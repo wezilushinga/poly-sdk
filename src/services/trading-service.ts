@@ -27,6 +27,7 @@ import { RateLimiter, ApiType } from '../core/rate-limiter.js';
 import type { UnifiedCache } from '../core/unified-cache.js';
 import { CACHE_TTL } from '../core/unified-cache.js';
 import { PolymarketError, ErrorCode } from '../core/errors.js';
+import type { Side, OrderType } from '../core/types.js';
 
 // Chain IDs
 export const POLYGON_MAINNET = 137;
@@ -39,8 +40,9 @@ const CLOB_HOST = 'https://clob.polymarket.com';
 // Types
 // ============================================================================
 
-export type Side = 'BUY' | 'SELL';
-export type OrderType = 'GTC' | 'FOK' | 'GTD' | 'FAK';
+// Side and OrderType are imported from core/types.ts
+// Re-export for backward compatibility
+export type { Side, OrderType } from '../core/types.js';
 
 export interface ApiCredentials {
   key: string;

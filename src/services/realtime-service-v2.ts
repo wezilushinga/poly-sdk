@@ -20,7 +20,7 @@ import {
   type ClobApiKeyCreds,
   ConnectionStatus,
 } from '@polymarket/real-time-data-client';
-import type { PriceUpdate, BookUpdate } from '../core/types.js';
+import type { PriceUpdate, BookUpdate, Orderbook, OrderbookLevel } from '../core/types.js';
 
 // ============================================================================
 // Types
@@ -36,14 +36,20 @@ export interface RealtimeServiceConfig {
 }
 
 // Market data types
-export interface OrderbookSnapshot {
+/**
+ * Extended orderbook snapshot from WebSocket with additional trading parameters.
+ * Extends the base Orderbook type from core/types.ts.
+ */
+export interface OrderbookSnapshot extends Orderbook {
+  /** Token/asset ID (required in WebSocket context) */
   assetId: string;
+  /** Market condition ID (required in WebSocket context) */
   market: string;
-  bids: Array<{ price: number; size: number }>;
-  asks: Array<{ price: number; size: number }>;
-  timestamp: number;
+  /** Tick size for price rounding */
   tickSize: string;
+  /** Minimum order size */
   minOrderSize: string;
+  /** Hash for change detection (required in WebSocket context) */
   hash: string;
 }
 

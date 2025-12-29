@@ -163,9 +163,8 @@ export type {
 export { TradingService, POLYGON_MAINNET, POLYGON_AMOY } from './services/trading-service.js';
 export type {
   TradingServiceConfig,
-  // Order types
-  Side,
-  OrderType,
+  // Order types - Side and OrderType are re-exported from core/types.ts via trading-service.ts
+  // They are also exported via `export * from './core/types.js'` above
   ApiCredentials,
   LimitOrderParams,
   MarketOrderParams,
@@ -179,10 +178,10 @@ export type {
 } from './services/trading-service.js';
 
 // Market types from MarketService
+// Note: Side and Orderbook are now in core/types.ts (exported via `export * from './core/types.js'` above)
 export type {
   Market,
   MarketToken,
-  Orderbook,
   PricePoint,
   PriceHistoryParams,
   PriceHistoryIntervalString,
